@@ -1,0 +1,24 @@
+{
+  "name": "adventofcode2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "day": "ts-node ./src/executor.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4",
+    "vitest": "^0.25.3"
+  },
+  "dependencies": {
+    "fs-extra": "^11.1.0",
+    "prettier": "^2.8.0",
+    "ts-node": "^10.9.1"
+  }
+}
