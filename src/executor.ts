@@ -2,9 +2,14 @@ import { readFile } from "fs/promises";
 import path from "path";
 
 import { solution as day1Part1, solution2 as day1Part2 } from "./day1";
+import {
+  calculateResult as day2Part1,
+  calculateResult2 as day2Part2,
+} from "./day2";
 
 const days: { [key: string]: { [key: string]: (s: string) => number } } = {
   day1: { "1": day1Part1, "2": day1Part2 },
+  day2: { "1": day2Part1, "2": day2Part2 },
 };
 
 const [_node, _path, day, part, input] = process.argv;

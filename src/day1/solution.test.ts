@@ -37,6 +37,7 @@ describe("Calorie counter", () => {
     expect(solution(input)).toEqual(output);
   });
 });
+
 describe("Calorie counter part 2", () => {
   test.each([
     {
