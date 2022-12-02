@@ -17,7 +17,12 @@ describe("calculate moves part 1", () => {
 describe("calculate moves part 2", () => {
   test.each([
     { input: [], output: 0 },
+    { input: ["A X"], output: 3 },
     { input: ["B X"], output: 1 },
+    { input: ["C X"], output: 2 },
+    { input: ["B X"], output: 1 },
+    { input: ["B Y"], output: 5 },
+    { input: ["B Z"], output: 9 },
     { input: ["C X"], output: 2 },
     { input: ["C Y"], output: 6 },
     { input: ["C Z"], output: 7 },

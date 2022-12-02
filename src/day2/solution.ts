@@ -83,9 +83,6 @@ export function calculateResult2(input: string): number {
 }
 
 export function findDesiredPlay(them: Play, desiredResult: Result): Play {
-  if (desiredResult === Result.draw) {
-    return them;
-  }
   if (desiredResult === Result.win) {
     switch (them) {
       case Play.scissors:
@@ -106,5 +103,5 @@ export function findDesiredPlay(them: Play, desiredResult: Result): Play {
         return Play.scissors;
     }
   }
-  throw new Error("Developer mistake");
+  return them;
 }

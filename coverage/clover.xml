@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1670021663834" clover="3.2.0">
+  <project timestamp="1670021663834" name="All files">
+    <metrics statements="68" coveredstatements="68" conditionals="34" coveredconditionals="34" methods="22" coveredmethods="22" elements="124" coveredelements="124" complexity="0" loc="68" ncloc="68" packages="2" files="4" classes="4"/>
+    <package name="day1">
+      <metrics statements="22" coveredstatements="22" conditionals="6" coveredconditionals="6" methods="9" coveredmethods="9"/>
+      <file name="solution.ts" path="/Users/kleeut/dev/adventOfCode2022/src/day1/solution.ts">
+        <metrics statements="22" coveredstatements="22" conditionals="6" coveredconditionals="6" methods="9" coveredmethods="9"/>
+        <line num="2" count="24" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="17" type="stmt"/>
+        <line num="8" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="13" count="24" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="20" count="24" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="23" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="17" type="stmt"/>
+        <line num="26" count="7" type="stmt"/>
+        <line num="27" count="35" type="stmt"/>
+        <line num="29" count="7" type="stmt"/>
+        <line num="30" count="7" type="stmt"/>
+        <line num="32" count="24" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="10" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="40" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="day2">
+      <metrics statements="46" coveredstatements="46" conditionals="28" coveredconditionals="28" methods="13" coveredmethods="13"/>
+      <file name="Play.ts" path="/Users/kleeut/dev/adventOfCode2022/src/day2/Play.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="Result.ts" path="/Users/kleeut/dev/adventOfCode2022/src/day2/Result.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="solution.ts" path="/Users/kleeut/dev/adventOfCode2022/src/day2/solution.ts">
+        <metrics statements="38" coveredstatements="38" conditionals="24" coveredconditionals="24" methods="11" coveredmethods="11"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="30" count="15" type="stmt"/>
+        <line num="31" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="38" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="39" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="15" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
+        <line num="49" count="5" type="stmt"/>
+        <line num="51" count="4" type="stmt"/>
+        <line num="52" count="4" type="stmt"/>
+        <line num="58" count="4" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="68" count="11" type="stmt"/>
+        <line num="70" count="12" type="stmt"/>
+        <line num="72" count="11" type="stmt"/>
+        <line num="73" count="11" type="stmt"/>
+        <line num="74" count="11" type="stmt"/>
+        <line num="79" count="11" type="stmt"/>
+        <line num="80" count="11" type="stmt"/>
+        <line num="86" count="20" type="cond" truecount="2" falsecount="0"/>
+        <line num="87" count="6" type="cond" truecount="3" falsecount="0"/>
+        <line num="89" count="2" type="stmt"/>
+        <line num="91" count="2" type="stmt"/>
+        <line num="93" count="2" type="stmt"/>
+        <line num="96" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="97" count="9" type="cond" truecount="3" falsecount="0"/>
+        <line num="99" count="3" type="stmt"/>
+        <line num="101" count="4" type="stmt"/>
+        <line num="103" count="2" type="stmt"/>
+        <line num="106" count="5" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
