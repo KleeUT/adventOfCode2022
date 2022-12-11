@@ -10,6 +10,7 @@ import { part1 as day3Part1, part2 as day3Part2 } from "./day3";
 import { part1 as day4Part1, part2 as day4Part2 } from "./day4";
 import { part1 as day5Part1, part2 as day5Part2 } from "./day5";
 import { part1 as day6Part1, part2 as day6Part2 } from "./day6";
+import { part1 as day8Part1, part2 as day8Part2 } from "./day8";
 
 const days: {
   [key: string]: { [key: string]: (s: string) => number | string };
@@ -20,6 +21,7 @@ const days: {
   day4: { "1": day4Part1, "2": day4Part2 },
   day5: { "1": day5Part1, "2": day5Part2 },
   day6: { "1": day6Part1, "2": day6Part2 },
+  day8: { "1": day8Part1, "2": day8Part2 },
 };
 
 const [_node, _path, day, part, input] = process.argv;
