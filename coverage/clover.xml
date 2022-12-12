@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1670646818123" clover="3.2.0">
-  <project timestamp="1670646818124" name="All files">
-    <metrics statements="169" coveredstatements="169" conditionals="66" coveredconditionals="66" methods="55" coveredmethods="55" elements="290" coveredelements="290" complexity="0" loc="169" ncloc="169" packages="5" files="7" classes="7"/>
+<coverage generated="1670843600348" clover="3.2.0">
+  <project timestamp="1670843600348" name="All files">
+    <metrics statements="257" coveredstatements="243" conditionals="93" coveredconditionals="89" methods="78" coveredmethods="77" elements="428" coveredelements="409" complexity="0" loc="257" ncloc="257" packages="7" files="9" classes="9"/>
     <package name="day1">
       <metrics statements="22" coveredstatements="22" conditionals="6" coveredconditionals="6" methods="9" coveredmethods="9"/>
       <file name="solution.ts" path="/Users/kleeut/dev/adventOfCode2022/src/day1/solution.ts">
@@ -205,6 +205,106 @@
         <line num="131" count="1" type="stmt"/>
         <line num="132" count="2" type="stmt"/>
         <line num="135" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="day6">
+      <metrics statements="26" coveredstatements="12" conditionals="8" coveredconditionals="4" methods="2" coveredmethods="1"/>
+      <file name="solution.ts" path="/Users/kleeut/dev/adventOfCode2022/src/day6/solution.ts">
+        <metrics statements="26" coveredstatements="12" conditionals="8" coveredconditionals="4" methods="2" coveredmethods="1"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="32" count="120" type="stmt"/>
+        <line num="33" count="120" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="25" type="stmt"/>
+        <line num="36" count="25" type="stmt"/>
+        <line num="37" count="95" type="cond" truecount="2" falsecount="0"/>
+        <line num="38" count="90" type="stmt"/>
+        <line num="40" count="5" type="stmt"/>
+        <line num="43" count="115" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="day8">
+      <metrics statements="62" coveredstatements="62" conditionals="19" coveredconditionals="19" methods="21" coveredmethods="21"/>
+      <file name="solution.ts" path="/Users/kleeut/dev/adventOfCode2022/src/day8/solution.ts">
+        <metrics statements="62" coveredstatements="62" conditionals="19" coveredconditionals="19" methods="21" coveredmethods="21"/>
+        <line num="3" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="16" count="116" type="stmt"/>
+        <line num="18" count="620" type="stmt"/>
+        <line num="19" count="620" type="stmt"/>
+        <line num="20" count="620" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="372" type="stmt"/>
+        <line num="27" count="620" type="stmt"/>
+        <line num="37" count="116" type="stmt"/>
+        <line num="44" count="84" type="stmt"/>
+        <line num="45" count="436" type="stmt"/>
+        <line num="47" count="436" type="stmt"/>
+        <line num="59" count="56" type="stmt"/>
+        <line num="60" count="56" type="stmt"/>
+        <line num="61" count="56" type="stmt"/>
+        <line num="65" count="20" type="stmt"/>
+        <line num="66" count="20" type="stmt"/>
+        <line num="67" count="80" type="stmt"/>
+        <line num="68" count="344" type="cond" truecount="2" falsecount="0"/>
+        <line num="69" count="80" type="stmt"/>
+        <line num="71" count="344" type="stmt"/>
+        <line num="74" count="20" type="stmt"/>
+        <line num="81" count="8" type="stmt"/>
+        <line num="82" count="28" type="stmt"/>
+        <line num="87" count="60" type="stmt"/>
+        <line num="91" count="4" type="stmt"/>
+        <line num="92" count="4" type="stmt"/>
+        <line num="93" count="4" type="stmt"/>
+        <line num="94" count="4" type="stmt"/>
+        <line num="97" count="4" type="stmt"/>
+        <line num="98" count="4" type="stmt"/>
+        <line num="99" count="100" type="stmt"/>
+        <line num="121" count="216" type="stmt"/>
+        <line num="122" count="216" type="stmt"/>
+        <line num="123" count="216" type="stmt"/>
+        <line num="125" count="1064" type="cond" truecount="2" falsecount="0"/>
+        <line num="126" count="424" type="stmt"/>
+        <line num="128" count="1064" type="cond" truecount="2" falsecount="0"/>
+        <line num="129" count="424" type="stmt"/>
+        <line num="131" count="1064" type="stmt"/>
+        <line num="138" count="216" type="stmt"/>
+        <line num="144" count="216" type="stmt"/>
+        <line num="148" count="876" type="stmt"/>
+        <line num="149" count="876" type="stmt"/>
+        <line num="150" count="1080" type="cond" truecount="2" falsecount="0"/>
+        <line num="151" count="536" type="stmt"/>
+        <line num="154" count="340" type="stmt"/>
+        <line num="161" count="212" type="stmt"/>
+        <line num="165" count="212" type="stmt"/>
+        <line num="169" count="212" type="stmt"/>
+        <line num="173" count="212" type="stmt"/>
+        <line num="177" count="212" type="stmt"/>
+        <line num="181" count="212" type="stmt"/>
+        <line num="185" count="4" type="stmt"/>
+        <line num="186" count="4" type="stmt"/>
+        <line num="187" count="4" type="stmt"/>
+        <line num="188" count="20" type="stmt"/>
+        <line num="189" count="100" type="stmt"/>
+        <line num="190" count="100" type="cond" truecount="2" falsecount="0"/>
+        <line num="191" count="8" type="stmt"/>
+        <line num="195" count="4" type="stmt"/>
       </file>
     </package>
   </project>
