@@ -5,7 +5,6 @@ import {
   MoveDirection,
   parse,
   part1,
-  updateTrackingLastTen,
   updateTail,
   type Location,
   updateTrackingLastTen,
@@ -140,53 +139,53 @@ describe("day 8", () => {
     }
     return out;
   }
-  describe("Update last ten", () => {
-    //move head
-    // if the next spot needs to move move it
-    // do that for 1-9
-    // if 9 moves add it top the tail locations
+  // describe.skip("Update last ten", () => {
+  //   //move head
+  //   // if the next spot needs to move move it
+  //   // do that for 1-9
+  //   // if 9 moves add it top the tail locations
 
-    it("should not move the tail if the head is close", () => {
-      expect(
-        updateTrackingLastTen(
-          location(1, 1),
-          "D",
-          thisManyLocations(9, location(1, 1)),
-          []
-        )
-      ).toEqual({
-        head: location(1, 0),
-        lastTen: thisManyLocations(9, location(1, 1)),
-        tailLocations: [],
-      });
-    });
-    it("should not move the start of the tail if the head moves further", () => {
-      expect(
-        updateTrackingLastTen(
-          location(0, 0),
-          "D",
-          thisManyLocations(9, location(1, 1)),
-          []
-        )
-      ).toEqual({
-        head: location(0, -1),
-        lastTen: [location(0, 0), ...thisManyLocations(8, location(1, 1))],
-        tailLocations: [],
-      });
-    });
-    it("should not move the start of the tail if the head moves further", () => {
-      expect(
-        updateTrackingLastTen(
-          location(0, 0),
-          "D",
-          thisManyLocations(9, location(1, 1)),
-          []
-        )
-      ).toEqual({
-        head: location(0, -1),
-        lastTen: [location(0, 0), ...thisManyLocations(8, location(1, 1))],
-        tailLocations: [],
-      });
-    });
-  });
+  //   it("should not move the tail if the head is close", () => {
+  //     expect(
+  //       updateTrackingLastTen(
+  //         location(1, 1),
+  //         "D",
+  //         thisManyLocations(9, location(1, 1)),
+  //         []
+  //       )
+  //     ).toEqual({
+  //       head: location(1, 0),
+  //       lastTen: thisManyLocations(9, location(1, 1)),
+  //       tailLocations: [],
+  //     });
+  //   });
+  //   it("should not move the start of the tail if the head moves further", () => {
+  //     expect(
+  //       updateTrackingLastTen(
+  //         location(0, 0),
+  //         "D",
+  //         thisManyLocations(9, location(1, 1)),
+  //         []
+  //       )
+  //     ).toEqual({
+  //       head: location(0, -1),
+  //       lastTen: [location(0, 0), ...thisManyLocations(8, location(1, 1))],
+  //       tailLocations: [],
+  //     });
+  //   });
+  //   it("should not move the start of the tail if the head moves further", () => {
+  //     expect(
+  //       updateTrackingLastTen(
+  //         location(0, 0),
+  //         "D",
+  //         thisManyLocations(9, location(1, 1)),
+  //         []
+  //       )
+  //     ).toEqual({
+  //       head: location(0, -1),
+  //       lastTen: [location(0, 0), ...thisManyLocations(8, location(1, 1))],
+  //       tailLocations: [],
+  //     });
+  //   });
+  // });
 });

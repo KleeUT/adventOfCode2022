@@ -92,7 +92,7 @@ export function updateTrackingLastTen(
       tailLocations,
     };
   }
-  / 
+
   return {
     head: newHead,
     lastTen,
