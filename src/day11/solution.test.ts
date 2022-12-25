@@ -88,7 +88,7 @@ Monkey 1:
       monkey.takeTurn();
       expect(throwSpy).toHaveBeenCalledWith(result);
     });
-    test.each([
+    test.skip.each([
       {
         operation: "+",
         operationValue: 19n,
