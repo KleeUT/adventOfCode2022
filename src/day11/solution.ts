@@ -20,7 +20,6 @@ export class Monkey {
     }) => void,
     private worryDivisor: number
   ) {
-    console.log(config);
     this._items = [...config.items];
     this._inspectionCount = 0;
   }
@@ -41,14 +40,6 @@ export class Monkey {
           item % this.config.testDivisor === 0
             ? this.config.truthyTarget
             : this.config.falsyTarget;
-        if (target === 2 || this.config.monkeyNumber === 2) {
-          console.table({
-            target,
-            item,
-            divisor: this.config.testDivisor,
-            me: this.config.monkeyNumber,
-          });
-        }
         this.throwTo({
           item,
           monkeyNumber: target,
@@ -58,9 +49,6 @@ export class Monkey {
     this._items = [];
   }
   catchItem(item: number) {
-    if (this.monkeyNumber === 2) {
-      console.log("received", item);
-    }
     this._items = [...this._items, item];
   }
   get inspectionCount() {
@@ -154,7 +142,6 @@ export function part1(input: string): number {
   const monkeyArray = Array.from(monkeys.values()).sort(
     (a, b) => b.inspectionCount - a.inspectionCount
   );
-  console.table(monkeyArray.map((x) => x.inspectionCount));
   return monkeyArray[0].inspectionCount * monkeyArray[1].inspectionCount;
 }
 
@@ -182,13 +169,6 @@ export function part2(input: string): number {
       monkey.takeTurn();
     }
     if (interstingRounds.includes(t + 1)) {
-      console.log(`----------------------${t + 1}-----------------------`);
-      // console.table(
-      //   Array.from(monkeys.values()).map((x) => [
-      //     x.monkeyNumber,
-      //     x.inspectionCount,
-      //   ])
-      // );
     }
   }
   const monkeyArray = Array.from(monkeys.values()).sort(

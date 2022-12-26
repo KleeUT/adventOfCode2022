@@ -42,7 +42,7 @@ if (!(part === "1" || part === "2")) {
   console.log("Missing 2nd argument");
   process.exit();
 }
-if (!(input === "sample" || input === "input")) {
+if (!(input === "sample" || input === "input" || input === "test")) {
   console.log("missing 3rd argument for input, must be sample or input");
   process.exit();
 }
