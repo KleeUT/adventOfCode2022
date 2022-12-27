@@ -89,14 +89,20 @@ export function readToTree(outputLines: string[]): DirectoryFileSystemNode {
   return root;
 }
 
-export function sumForDirectory(root: DirectoryFileSystemNode): {
+export function sumForDirectory(
+  root: DirectoryFileSystemNode,
+  prefix: string
+): {
   name: string;
   size: number;
 }[] {
-  const childrenSizes = root.directoryChildren.flatMap(sumForDirectory);
+  const name = `${prefix}/${root.name === "/" ? "root" : root.name}`;
+  const childrenSizes = root.directoryChildren.flatMap((node) =>
+    sumForDirectory(node, name)
+  );
   return [
     {
-      name: root.name,
+      name: name,
       size:
         root.fileChildren.reduce((total, node) => total + node.size, 0) +
         childrenSizes.reduce((t, c) => t + c.size, 0),
@@ -105,27 +111,22 @@ export function sumForDirectory(root: DirectoryFileSystemNode): {
   ];
 }
 
-function visualize(root: DirectoryFileSystemNode, prefix: string): string[] {
-  let out: string[] = [];
-  out.push(prefix + "-" + root.name + "/");
-  root.fileChildren.forEach((n) => {
-    out.push(prefix + " -" + n.name + ":" + n.size);
-  });
-  root.directoryChildren.forEach((n) => {
-    const childData = visualize(n, prefix + " ");
-    out = [...out, ...childData];
-  });
-  return out;
-}
-
 export function part1(input: string): number {
   const root = readToTree(input.split("\n"));
   // console.log(visualize(root, "").join("\n"));
-  const sums = sumForDirectory(root);
+  const sums = sumForDirectory(root, "");
+  sums.map((n) => `${n.name} : ${n.size}`).forEach((line) => console.log(line));
   const lessThanOneHundredThousand = sums.filter(
-    (x) => x.size < oneHundredThousand
+    (x) => x.size <= oneHundredThousand
   );
-  console.log(sums.map((x) => `${x.name}:${x.size}`).join("\n"));
+  console.log("-----------------------------------------------");
+  console.log("-----------------------------------------------");
+  console.log("------  lessThanOneHundredThousand   ----------");
+  console.log("-----------------------------------------------");
+  console.log("-----------------------------------------------");
+  console.log(
+    lessThanOneHundredThousand.map((x) => `${x.name}:${x.size}`).join("\n")
+  );
   let answer = lessThanOneHundredThousand.reduce((t, c) => c.size + t, 0);
   if (answer === 1630322) {
     console.error("1630322 is Wrong");

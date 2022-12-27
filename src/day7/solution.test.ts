@@ -84,7 +84,7 @@ describe("day template", () => {
       const root = new DirectoryFileSystemNode("/");
       root.addFileChildNode(new FileFileSystemNode("d", 84, root));
 
-      expect(sumForDirectory(root)).toEqual([{ name: "/", size: 84 }]);
+      expect(sumForDirectory(root, "")).toEqual([{ name: "/root", size: 84 }]);
     });
     it("nested directory", () => {
       const root = new DirectoryFileSystemNode("/");
@@ -93,14 +93,14 @@ describe("day template", () => {
       root.addDirectoryChildNode(b);
       b.addFileChildNode(new FileFileSystemNode("c", 1900, root));
 
-      expect(sumForDirectory(root)).toEqual([
-        { name: "/", size: 1984 },
-        { name: "b", size: 1900 },
+      expect(sumForDirectory(root, "")).toEqual([
+        { name: "/root", size: 1984 },
+        { name: "/root/b", size: 1900 },
       ]);
     });
   });
   describe("part 1", () => {
-    test("full test", () => {
+    test("counts child directory and parent direcctory", () => {
       const outputLines = [
         "$ cd /",
         "$ ls",
@@ -108,10 +108,54 @@ describe("day template", () => {
         "200 b.txt",
         "$ cd a",
         "$ ls",
-        "99999 c.txt",
+        "10000 c.txt",
       ];
 
-      expect(part1(outputLines.join("\n"))).toEqual(99999);
+      expect(part1(outputLines.join("\n"))).toEqual(20200);
+    });
+    test("if there is a big child ignore it all", () => {
+      const outputLines = [
+        "$ cd /",
+        "$ ls",
+        "dir a",
+        "200 b.txt",
+        "$ cd a",
+        "$ ls",
+        "110000 c.txt",
+      ];
+
+      expect(part1(outputLines.join("\n"))).toEqual(0);
+    });
+    test("if there is a big child ignore it all", () => {
+      const outputLines = [
+        "$ cd /",
+        "$ ls",
+        "dir a",
+        "200000 b.txt",
+        "$ cd a",
+        "$ ls",
+        "10000 c.txt",
+      ];
+
+      expect(part1(outputLines.join("\n"))).toEqual(10000);
+    });
+    test("if there is a big child ignore it all", () => {
+      const outputLines = [
+        "$ cd /",
+        "$ ls",
+        "dir a",
+        "dir d",
+        "200 b.txt",
+        "$ cd a",
+        "$ ls",
+        "10000 c.txt",
+        "$ cd ..",
+        "$ cd d",
+        "$ ls",
+        "100001 c.txt",
+      ];
+
+      expect(part1(outputLines.join("\n"))).toEqual(10000);
     });
   });
 });
