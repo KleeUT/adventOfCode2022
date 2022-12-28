@@ -117,6 +117,35 @@ export function part1(input: string): number {
   }, 0);
 }
 
+export function parseInputToArray(input: string): Packet[][] {
+  return input
+    .split("\n")
+    .filter((x) => x !== "")
+    .map((line) => JSON.parse(line) as Packet[]);
+}
 export function part2(input: string): number {
-  return 0;
+  const packets = [...parseInputToArray(input), [[2]], [[6]]];
+  packets.sort((first, second) =>
+    comparePacketPair({
+      first,
+      second,
+    }) === PacketOrder.Correct
+      ? -1
+      : 1
+  );
+  return packets.reduce((total, packet, index) => {
+    if (packet.length !== 1) {
+      return total;
+    }
+    const packet0 = packet[0];
+
+    if (!Array.isArray(packet0) || packet0.length !== 1) {
+      return total;
+    }
+    if (packet0[0] === 6 || packet0[0] === 2) {
+      return total * (index + 1);
+    }
+
+    return total;
+  }, 1);
 }
